@@ -23,3 +23,10 @@ The project can still run in the Arduino IDE with [these instructions](https://r
 ## Dependencies
 
 
+## Architecture
+
+The code will use FreeRTOS in order to implement queues and task scheduling. It will utilise both cores, each for one main purpose: Core 0 for data acquisition and the control loop, Core 1 for telemetry purposes.
+
+More detail in the [Architecture document](/esp32_fc/Docs/Architecture), found inside the esp_32 > Docs directory
+
+
