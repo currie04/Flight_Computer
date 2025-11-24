@@ -33,7 +33,7 @@ One for each sensor:
 
 This is because we produce data faster than it can be consumed.
 
-From this queue, the processing task runs, producing __qState__ (for control task) and __qTelemetry__ (for telemetry logging + transmission). __qTelemetry__ is stored in telemetry packets.
+From this queue, the processing task runs, updating the State struct for the control task  to use and adding to __qTelemetry__ (for telemetry logging + transmission). __qTelemetry__ is stored in telemetry packets, State is stored as the latest information in the struct.
 
 Packets from  __qTelemetry__  are sent out to __qRadioTx__ and __qLogger__, for their individual tasks to deal with
 
@@ -41,7 +41,4 @@ Packets from  __qTelemetry__  are sent out to __qRadioTx__ and __qLogger__, for 
 ## Diagram
 
 ![Code diagram](../../Images/architectureDraft.drawio.svg)
-
-
-
 
