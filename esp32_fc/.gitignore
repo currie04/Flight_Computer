@@ -1,0 +1,11 @@
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+.clang_complete
+.gcc-flags.json
+venv/
+.venv/
+*.swp
+*.swo
+*~

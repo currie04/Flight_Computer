@@ -15,3 +15,18 @@ This repository contains code and documentation related to the [NAME HERE] fligh
 ## Block Diagram
 ![Block Diagram of the Flight Computer](Images/FC_Block_Diagram.png)
 
+## Structure
+In the esp32_fc folder, a [PlatformIO](https://platformio.org/platformio-ide) project has been created. This will allow us to use VSCode for programming.
+
+The project can still run in the Arduino IDE with [these instructions](https://runningdeveloper.com/blog/platformio-project-to-arduino-ide/). We can also still utilise the arduino libraries for our breakouts, as PlatformIO will import them
+
+## Dependencies
+
+
+## Architecture
+
+The code will use FreeRTOS in order to implement queues and task scheduling. It will utilise both cores, each for one main purpose: Core 0 for data acquisition and the control loop, Core 1 for telemetry purposes.
+
+More detail in the [Architecture document](/esp32_fc/Docs/Architecture), found inside the esp_32 > Docs directory
+
+
